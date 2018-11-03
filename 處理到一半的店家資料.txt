@@ -1,0 +1,61 @@
+  {
+    "storeName": "澄悅商旅",
+    "storePhoneNumber": "04-7781313",
+    "posX": 10,
+    "posY": -1,
+  },
+
+  {
+    "storeName": "The OLD ROYAL 老皇家泰國餐廳",
+    "storePhoneNumber": "04-7781397",
+    "posX": 11,
+    "posY": -2,
+  },
+  {
+    "storeName": "麥當勞",
+    "storePhoneNumber": "04-7772471",
+    "posX": 13,
+    "posY": -5,
+  },
+  {
+    "storeName": "玉珍齋",
+    "storePhoneNumber": "04-7755660",
+    "posX": 1,
+    "posY": -5,
+  },
+  {
+    "storeName": "馨雞財專業炸雞",
+    "storePhoneNumber": "0919-812205",
+    "posX": 2,
+    "posY": -7,
+  },
+  {
+    "storeName": "鹿港施豆花",
+    "storePhoneNumber": "0919-812205",
+    "posX": 4,
+    "posY": -10,
+  },
+  {
+    "storeName": "楊州肉圓芋丸",
+    "storePhoneNumber": "0988-776736",
+    "posX": 2,
+    "posY": -16,
+  },
+  {
+    "storeName": "王罔麵線糊",
+    "storePhoneNumber": "0958-629960",
+    "posX": 3,
+    "posY": -17,
+  },
+  {
+    "storeName": "阿振肉包",
+    "storePhoneNumber": "04-7772754",
+    "posX": 10,
+    "posY": -19,
+  },
+  {
+    "storeName": "黑豬灶爌肉飯",
+    "storePhoneNumber": "0932-605368",
+    "posX": 11,
+    "posY": -20,
+  }

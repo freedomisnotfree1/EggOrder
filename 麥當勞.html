@@ -1,0 +1,527 @@
+<html>
+
+<head>
+    <style>
+        .frame {
+            position: absolute;
+            width: 375px;
+            height: 667px;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .nav {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+            width: 100%;
+            height: 70%;
+            border-color: rgb(243, 163, 42);
+            border-width: 1px;
+            border-style: solid;
+
+        }
+
+
+        .navElement {
+            text-align: center;
+            line-height: 66.69px;
+        }
+
+        .Pic {
+            background-color: rgb(255, 251, 196);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 75%;
+            height: 100%;
+            float: left;
+        }
+
+        .menu {
+
+            border-color: rgb(248, 241, 148);
+            position: relative;
+            border-width: 1px;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+
+        .mainDish {
+            background-color: rgb(253, 242, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 33%;
+            /* float: left; */
+        }
+
+        .drinks {
+            background-color: rgb(253, 201, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 33%;
+            /* float: left; */
+        }
+
+        .dessert {
+            background-color: rgb(253, 135, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 34%;
+            /* float: left; */
+        }
+
+        .blank1 {
+            background-color: rgb(253, 242, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 20%;
+            float: left;
+        }
+
+        .blank2 {
+            background-color: rgb(253, 242, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 20%;
+            float: left;
+        }
+
+        .panel {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+            width: 100%;
+            height: 29.5%;
+            border-color: rgb(120, 236, 116);
+            border-width: 1px;
+            border-style: solid;
+            background-color: rgb(231, 231, 231)
+        }
+
+        .panelLeft {
+            border-color: rgb(248, 241, 148);
+            position: relative;
+            border-width: 1px;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+
+        .panelRightNo {
+            border-color: rgb(248, 241, 148);
+            position: relative;
+            border-width: 1px;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 60%;
+            height: 100%;
+            float: right;
+        }
+
+        .minus {
+            background-color: rgb(255, 252, 96);
+            position: relative;
+            margin-right: 0px;
+
+            width: 30%;
+            height: 30%;
+            float: right;
+        }
+
+        .No {
+            background-color: rgb(250, 197, 84);
+            position: relative;
+            margin-right: 0px;
+
+            width: 39%;
+            height: 30%;
+            float: right;
+        }
+
+        .plus {
+            background-color: rgb(255, 252, 96);
+            position: relative;
+            margin-right: 0px;
+
+            width: 30%;
+            height: 30%;
+            float: right;
+        }
+
+        .list {
+            line-height: 36.69px;
+            overflow-y: scroll;
+        }
+
+        img {
+
+            width: 100%;
+        }
+    </style>
+    <script>
+        var mainDishList = [{
+            "name": "大麥克",
+            "pic": "orderPic_20180929/麥當勞/大麥克.png",
+            "info": "牛肉餅<br>生菜<br>大麥克麵包<br>吉事<br>大麥克醬<br>脫水洋蔥<br>酸黃瓜",
+            "price": 79,
+        }, {
+            "name": "BLT安格斯黑牛堡",
+            "pic": "orderPic_20180929/麥當勞/BLT安格斯黑牛堡.png",
+            "info": "黑色的牛",
+            "price": 119,
+        }, {
+            "name": "BLT嫩煎鷄腿堡",
+            "pic": "orderPic_20180929/麥當勞/BLT嫩煎鷄腿堡.png",
+            "info": "嫩煎的喔",
+            "price": 119,
+        }, {
+            "name": "BLT辣脆鷄腿堡",
+            "pic": "orderPic_20180929/麥當勞/BLT辣脆鷄腿堡.png",
+            "info": "香辣好吃",
+            "price": 119,
+        }, ];
+        var drinksDishList = [{
+            "name": "可口可樂",
+            "pic": "orderPic_20180929/麥當勞/可口可樂.png",
+            "info": "可以去冰",
+            "price": 40,
+        }, {
+            "name": "冰綠茶(無糖)",
+            "pic": "orderPic_20180929/麥當勞/冰綠茶(無糖).png",
+            "info": "無糖健康",
+            "price": 20,
+        }];
+        var dessertList = [{
+            "name": "水果袋-蘋果切片",
+            "pic": "orderPic_20180929/麥當勞/水果袋-蘋果切片.png",
+            "info": "蘋果切好了",
+            "price": 40,
+        }, {
+            "name": "冰炫風(OREO)",
+            "pic": "orderPic_20180929/麥當勞/冰炫風(OREO).png",
+            "info": "不用轉一轉也不用舔一舔",
+            "price": 40,
+
+        }];
+        var mainDishIsClicked = false;
+        var drinksIsClicked = false;
+        var dessertIsClicked = false;
+        var value = 0;
+
+        function minus() {
+            value = value - 1;
+
+            if (value < 0) {
+                value = 0;
+            }
+            document.getElementById("No").innerHTML = value;
+        }
+
+        function plus() {
+            value = value + 1;
+
+            document.getElementById("No").innerHTML = value;
+        }
+
+        function dishClicked(abc, dishName) {
+
+            var tmplist = null;
+            if (abc === 'mainDish') {
+                tmplist = mainDishList;
+            } else if (abc === 'drinksDish') {
+                tmplist = drinksDishList;
+            } else if (abc === 'dessert') {
+                tmplist = dessertList;
+            }
+
+            var clickedDishIndex = 0;
+            for (var i = 0; i < tmplist.length; i++) {
+                if (tmplist[i].name === dishName) {
+                    clickedDishIndex = i;
+                }
+            }
+            var tmpString = "<img src=\"";
+            tmpString += tmplist[clickedDishIndex].pic;
+            tmpString += " \">";
+
+            document.getElementById("dishPic").innerHTML = tmpString;
+            document.getElementById("dishInfoContainer").innerHTML = tmplist[clickedDishIndex].info;
+
+
+        }
+
+
+        function mainDishClicked() {
+            if (drinksIsClicked === true) {
+                drinksClicked();
+            }
+            if (dessertIsClicked === true) {
+                dessertClicked();
+            }
+
+
+            if (mainDishIsClicked === false) {
+                mainDishIsClicked = true;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "10%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "10%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "10%";
+
+
+                var mainDishListElement = document.getElementById("mainDishList");
+                mainDishListElement.style.height = "70%";
+                for (var i = 0; i < mainDishList.length; i++) {
+                    var tmpString = "";
+                    tmpString +=
+                        "<div style=\"height:76px; width:100%; background-color:rgb(255, 255, 255);\" onclick=\"dishClicked(";
+
+                    tmpString += "'mainDish'";
+                    tmpString += ",";
+                    tmpString += "'" + mainDishList[i].name + "'";
+                    tmpString += ");\">";
+
+                    tmpString += mainDishList[i].name;
+
+                    tmpString += "</div>";
+
+
+                    mainDishListElement.innerHTML += tmpString;
+                }
+            } else {
+                mainDishIsClicked = false;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "33%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "33%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "34%";
+
+
+                var mainDishListElement = document.getElementById("mainDishList");
+                mainDishListElement.style.height = "0%";
+                mainDishListElement.innerHTML = "";
+
+                for (var i = 0; i < mainDishList.length; i++) {
+                    var tmpString = "";
+                    tmpString +=
+                        "<div style=\"height:76px; width:100%; background-color:rgb(255, 255, 255);\" onclick=\"dishClicked(";
+
+                    tmpString += "'mainDish'";
+                    tmpString += ",";
+                    tmpString += "'" + dessertList[i].name + "'";
+                    tmpString += ");\">";
+
+                    tmpString += dessertList[i].name;
+
+                    tmpString += "</div>";
+
+
+                    mainDishListElement.innerHTML += tmpString;
+                }
+
+            }
+        }
+
+        function drinksClicked() {
+            if (mainDishIsClicked === true) {
+                mainDishClicked();
+            }
+            if (dessertIsClicked === true) {
+                dessertClicked();
+            }
+
+
+            if (drinksIsClicked === false) {
+                drinksIsClicked = true;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "10%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "10%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "10%";
+
+
+                var drinksListElement = document.getElementById("drinksList");
+                drinksListElement.style.height = "70%";
+
+
+                for (var i = 0; i < drinksDishList.length; i++) {
+                    var tmpString = "";
+                    tmpString +=
+                        "<div style=\"height:76px; width:100%; background-color:rgb(255, 255, 255);\" onclick=\"dishClicked(";
+
+                    tmpString += "'drinksDish'";
+                    tmpString += ",";
+                    tmpString += "'" + drinksDishList[i].name + "'";
+                    tmpString += ");\">";
+
+                    tmpString += drinksDishList[i].name;
+
+                    tmpString += "</div>";
+
+
+                    drinksListElement.innerHTML += tmpString;
+                }
+            } else {
+                drinksIsClicked = false;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "33%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "33%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "34%";
+
+
+                var drinksListElement = document.getElementById("drinksList");
+                drinksListElement.style.height = "0%";
+                drinksListElement.innerHTML = "";
+
+            }
+        }
+
+        function dessertClicked() {
+            if (mainDishIsClicked === true) {
+                mainDishClicked();
+            }
+            if (drinksIsClicked === true) {
+                drinksClicked();
+            }
+
+            if (dessertIsClicked === false) {
+
+                dessertIsClicked = true;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "10%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "10%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "10%";
+
+
+                var dessertListElement = document.getElementById("dessertList");
+                dessertListElement.style.height = "70%";
+
+                for (var i = 0; i < dessertList.length; i++) {
+                    var tmpString = "";
+                    tmpString +=
+                        "<div style=\"height:76px; width:100%; background-color:rgb(255, 255, 255);\" onclick=\"dishClicked(";
+
+                    tmpString += "'dessert'";
+                    tmpString += ",";
+                    tmpString += "'" + dessertList[i].name + "'";
+                    tmpString += ");\">";
+
+                    tmpString += dessertList[i].name;
+
+                    tmpString += "</div>";
+
+
+                    dessertListElement.innerHTML += tmpString;
+                }
+            } else {
+                dessertIsClicked = false;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "33%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "33%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "34%";
+
+
+                var dessertListElement = document.getElementById("dessertList");
+                dessertListElement.style.height = "0%";
+                dessertListElement.innerHTML = "";
+
+            }
+        }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <div class="frame">
+        <div class="nav">
+            <div id="dishPic" class="navElement Pic"></div>
+            <div class="navElement menu">
+                <div id="mainDish" class="navElement mainDish" onclick="mainDishClicked();">主餐
+                </div>
+                <div id="mainDishList" class="list">
+                </div>
+                <div id="drinks" class="navElement drinks" onclick="drinksClicked();">飲料
+                </div>
+                <div id="drinksList" class="list">
+                </div>
+                <div id="dessert" class="navElement dessert" onclick="dessertClicked();">甜點
+                </div>
+                <div id="dessertList" class="list">
+                </div>
+                <!-- <div class="navElement blank1">
+                </div>
+                <div class="navElement blank2">
+                </div> -->
+            </div>
+
+            <div class="contentScroll">
+
+
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelLeft">菜色介紹
+                <div id="dishInfoContainer">
+
+                </div>
+            </div>
+            <div class="panelRightNo">
+                <div id="plus" class=" plus" onclick="plus()">+
+                </div>
+                <div id="No" class=" No">0
+                </div>
+                <div id="minus" class=" minus" onclick="minus()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+.frame {
+    position: absolute;
+    width: 375px;
+    height: 667px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.nav {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 10%;
+    border-color: rgb(243, 163, 42);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.contentHidden {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 90%;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.contentScroll {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 107.9%;
+    height: 100%;
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    overflow-y: scroll;
+    padding-right: 30px;
+    /* Increase/decrease this value for cross-browser compatibility */
+    padding-bottom: 30px;
+    /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box;
+    /* So the width will be 100% + 17px */
+}
+
+.navElement {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 66.69px;
+}
+
+.location {
+    background-color: rgb(255, 251, 196);
+}
+
+.time {
+    background-color: rgb(253, 242, 89);
+}
+
+.price {
+    background-color: rgb(255, 251, 196);
+}
+
+.type {
+    background-color: rgb(253, 242, 89);
+}
+
+.store {
+    width: 100%;
+    height: 150.5725px;
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.storePic {
+    width: 59%;
+    height: 150.5725px;
+    background-color: rgb(250, 249, 249);
+    border-width: 1px;
+    border-style: solid;
+    float: left;
+    overflow: hidden;
+    padding: -9 0px;
+}
+
+.storeInfo {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 39%;
+    height: 150.5725px;
+    background-color: rgb(255, 207, 117);
+    border-width: 1px;
+    border-style: solid;
+    float: left;
+}
+
+a {
+    display: block;
+}
+
+img {
+    /* margin-top: -50px; */
+    
+    width: 100%;
+
+}

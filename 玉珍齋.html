@@ -1,0 +1,445 @@
+<html>
+
+<head>
+    <style>
+        .frame {
+            position: absolute;
+            width: 375px;
+            height: 667px;
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        .nav {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+            width: 100%;
+            height: 70%;
+            border-color: rgb(243, 163, 42);
+            border-width: 1px;
+            border-style: solid;
+
+        }
+
+
+        .navElement {
+            text-align: center;
+            line-height: 66.69px;
+        }
+
+        .Pic {
+            background-color: rgb(255, 251, 196);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 75%;
+            height: 100%;
+            float: left;
+        }
+
+        .menu {
+
+            border-color: rgb(248, 241, 148);
+            position: relative;
+            border-width: 1px;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+
+        .mainDish {
+            background-color: rgb(253, 242, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 33%;
+            /* float: left; */
+        }
+
+        .drinks {
+            background-color: rgb(253, 201, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 33%;
+            /* float: left; */
+        }
+
+        .dessert {
+            background-color: rgb(253, 135, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 34%;
+            /* float: left; */
+        }
+
+        .blank1 {
+            background-color: rgb(253, 242, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 20%;
+            float: left;
+        }
+
+        .blank2 {
+            background-color: rgb(253, 242, 89);
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 100%;
+            height: 20%;
+            float: left;
+        }
+
+        .panel {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 0px;
+            width: 100%;
+            height: 29.5%;
+            border-color: rgb(120, 236, 116);
+            border-width: 1px;
+            border-style: solid;
+            background-color: rgb(231, 231, 231)
+        }
+
+        .panelLeft {
+            border-color: rgb(248, 241, 148);
+            position: relative;
+            border-width: 1px;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+
+        .panelRightNo {
+            border-color: rgb(248, 241, 148);
+            position: relative;
+            border-width: 1px;
+            margin-left: 0px;
+            margin-top: 0px;
+
+            width: 60%;
+            height: 100%;
+            float: right;
+        }
+
+        .minus {
+            background-color: rgb(255, 252, 96);
+            position: relative;
+            margin-right: 0px;
+
+            width: 30%;
+            height: 30%;
+            float: right;
+        }
+
+        .No {
+            background-color: rgb(250, 197, 84);
+            position: relative;
+            margin-right: 0px;
+
+            width: 39%;
+            height: 30%;
+            float: right;
+        }
+
+        .plus {
+            background-color: rgb(255, 252, 96);
+            position: relative;
+            margin-right: 0px;
+
+            width: 30%;
+            height: 30%;
+            float: right;
+        }
+
+        img {
+
+            width: 100%;
+        }
+    </style>
+    <script>
+        var mainDishList = [{
+            "name": "土鳯梨酥",
+            "pic": "orderPic_20180929/玉珍齋/土鳯梨酥.jpeg",
+            "info": "酸甜口感濃郁果香好滋味",
+            "price": 480/12,
+        }, {
+            "name": "富貴無邊禮盒",
+            "pic": "orderPic_20180929/玉珍齋/富貴無邊禮盒.jpeg",
+            "info": "南棗核桃糕1入<br>素食綠豆糕<br>鮮奶小酥餅2入<br>堅果香餅2入<br>鳳梨酥1入<br>鳳黃酥1入",
+            "price": 480,
+        },];
+        var drinksDishList = [{
+            "name": "素食綠豆糕(純素)",
+            "pic": "orderPic_20180929/玉珍齋/素食綠豆糕(純素).jpeg",
+            "info": "素食",
+            "price": 100,
+        }, {
+            "name": "口酥餅-原味 (奶蛋素)",
+            "pic": "orderPic_20180929/玉珍齋/口酥餅-原味 (奶蛋素).jpeg",
+            "info": "好吃小點心",
+            "price": 100,
+        }];
+        var dessertList = [{
+            "name": "綠豆沙素餅(奶素)",
+            "pic": "orderPic_20180929/玉珍齋/綠豆沙素餅(奶素).jpeg",
+            "info": "綠豆做的",
+            "price": 240,
+        }, {
+            "name": "鴛鴦餅(葷)",
+            "pic": "orderPic_20180929/玉珍齋/鴛鴦餅(葷).jpeg",
+            "info": "飽滿內餡，純手工製作，讓您細細品味，吃出幸福滋味多種口味可供選擇，是您訂婚喜餅最佳選擇",
+            "price": 150,
+
+        }];
+        var mainDishIsClicked = false;
+        var drinksIsClicked = false;
+        var dessertIsClicked = false;
+        var value = 0;
+
+        function minus() {
+            value = value - 1;
+
+            if (value < 0) {
+                value = 0;
+            }
+            document.getElementById("No").innerHTML = value;
+        }
+
+        function plus() {
+            value = value + 1;
+
+            document.getElementById("No").innerHTML = value;
+        }
+
+        function dishClicked(dishName) {
+            var clickedDishIndex = 0;
+            for (var i = 0; i < mainDishList.length; i++) {
+                if (mainDishList[i].name === dishName) {
+                    clickedDishIndex = i;
+                }
+            }
+            var tmpString = "<img src=\"";
+            tmpString += mainDishList[clickedDishIndex].pic;
+            tmpString += " \">";
+
+            document.getElementById("dishPic").innerHTML = tmpString;
+            document.getElementById("dishInfoContainer").innerHTML = mainDishList[clickedDishIndex].info;
+
+
+        }
+
+
+        function mainDishClicked() {
+            if(drinksIsClicked === true){
+                drinksClicked(); 
+            }
+            if(dessertIsClicked === true){
+                dessertClicked(); 
+            }
+            
+            
+            if (mainDishIsClicked === false) {
+                mainDishIsClicked = true;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "10%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "10%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "10%";
+
+
+                var mainDishListElement = document.getElementById("mainDishList");
+                mainDishListElement.style.height = "70%";
+                for (var i = 0; i < mainDishList.length; i++) {
+                    var tmpString = "";
+                    tmpString +=
+                        "<div style=\"height:100%; width:100%; background-color:rgb(255, 255, 255);\" onclick=\"dishClicked(";
+                    tmpString += "'" + mainDishList[i].name + "'";
+                    tmpString += ");\">";
+                    tmpString += mainDishList[i].name;
+                    tmpString += "</div>";
+
+
+                    mainDishListElement.innerHTML += tmpString;
+                }
+            } else {
+                mainDishIsClicked = false;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "33%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "33%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "34%";
+
+
+                var mainDishListElement = document.getElementById("mainDishList");
+                mainDishListElement.style.height = "0%";
+                mainDishListElement.innerHTML = "";
+
+            }
+        }
+
+        function drinksClicked() {
+            if(mainDishIsClicked === true){
+                mainDishClicked(); 
+            }
+            if(dessertIsClicked === true){
+                dessertClicked(); 
+            }
+            
+
+            if (drinksIsClicked === false) {
+                drinksIsClicked = true;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "10%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "10%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "10%";
+
+
+                var drinksListElement = document.getElementById("drinksList");
+                drinksListElement.style.height = "70%";
+                drinksListElement.innerHTML =
+                    "<div style=\"height:100%; width:100%; background-color:rgb(255, 255, 255);\">可口可樂</div>"
+            } else {
+                drinksIsClicked = false;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "33%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "33%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "34%";
+
+
+                var drinksListElement = document.getElementById("drinksList");
+                drinksListElement.style.height = "0%";
+                drinksListElement.innerHTML = "";
+
+            }
+        }
+
+        function dessertClicked() {
+            if(mainDishIsClicked === true){
+                mainDishClicked(); 
+            }
+            if(drinksIsClicked === true){
+                drinksClicked(); 
+            }
+
+            if (dessertIsClicked === false) {
+                dessertIsClicked = true;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "10%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "10%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "10%";
+
+
+                var dessertListElement = document.getElementById("dessertList");
+                dessertListElement.style.height = "70%";
+                dessertListElement.innerHTML =
+                    '<div style=\"height:100%; width:100%; background-color:rgb(255, 255, 255);\">蘋果切片</div>'
+            } else {
+                dessertIsClicked = false;
+                var mainDishElement = document.getElementById("mainDish");
+                mainDishElement.style.height = "33%";
+
+                var drinksElement = document.getElementById("drinks");
+                drinksElement.style.height = "33%";
+
+                var dessertElement = document.getElementById("dessert");
+                dessertElement.style.height = "34%";
+
+
+                var dessertListElement = document.getElementById("dessertList");
+                dessertListElement.style.height = "0%";
+                dessertListElement.innerHTML = "";
+
+            }
+        }
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <div class="frame">
+        <div class="nav">
+            <div id="dishPic" class="navElement Pic"></div>
+            <div class="navElement menu">
+                <div id="mainDish" class="navElement mainDish" onclick="mainDishClicked();">經典禮盒
+                </div>
+                <div id="mainDishList">
+                </div>
+                <div id="drinks" class="navElement drinks" onclick="drinksClicked();">鳯眼糕點
+                </div>
+                <div id="drinksList">
+                </div>
+                <div id="dessert" class="navElement dessert" onclick="dessertClicked();">傳統大餅
+                </div>
+                <div id="dessertList">
+                </div>
+                <!-- <div class="navElement blank1">
+                </div>
+                <div class="navElement blank2">
+                </div> -->
+            </div>
+
+            <div class="contentScroll">
+
+
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panelLeft">菜色介紹
+                <div id="dishInfoContainer">
+
+                </div>
+            </div>
+            <div class="panelRightNo">
+                <div id="plus" class=" plus" onclick="plus()">+
+                </div>
+                <div id="No" class=" No">0
+                </div>
+                <div id="minus" class=" minus" onclick="minus()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
